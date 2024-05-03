@@ -2,15 +2,17 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Image from "../components/Image";
 import { fetchRandomDogImageAction } from "../redux/actions/dogImageActions";
-import fetchDogImage from "../services/api";
+import fetchImage from "../services/api";
 import NavBar from "../components/Navbar";
 
 function DogImagePage() {
   const dispatch = useDispatch();
   const imageUrl = useSelector((state) => state.dogImage.imageUrl);
+  const baseUrl = useSelector((state) => state.baseUrl)
+
   const handleFetchDogImage = async () => {
     try {
-      const imageUrl = await fetchDogImage();
+      const imageUrl = await fetchImage(baseUrl);
       dispatch(fetchRandomDogImageAction(imageUrl));
     } catch (error) {
       console.error("Failed to fetch dog image:", error);

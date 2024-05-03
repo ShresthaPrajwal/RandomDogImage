@@ -4,8 +4,8 @@ const initialState = {
   imageUrl: '',
 };
 
-const dogImageSlice = createSlice({
-  name: 'dogImage',
+const catImageSlice = createSlice({
+  name: 'catImage',
   initialState,
   reducers: {
     fetchRandomImage(state, action) {
@@ -14,6 +14,6 @@ const dogImageSlice = createSlice({
   },
 });
 
-export const {fetchRandomImage} = dogImageSlice.actions
+export const {fetchRandomImage} = catImageSlice.actions
 
-export default dogImageSlice.reducer;
+export default catImageSlice.reducer;

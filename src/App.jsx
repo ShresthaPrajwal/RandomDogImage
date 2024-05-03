@@ -1,8 +1,8 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import DogImagePage from './pages/DogImagePage';
-import CatImagePage from './pages/CatImagePage';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import DogImagePage from "./pages/DogImagePage";
+import CatImagePage from "./pages/CatImagePage";
+import "./App.css";
 
 function App() {
   return (
