@@ -8,12 +8,11 @@ import { fetchRandomCatImageAction } from "../redux/actions/catImageAction";
 function CatImagePage() {
   const dispatch = useDispatch();
   const imageUrl = useSelector((state) => state.catImage.imageUrl);
-  const baseUrl = useSelector((state) => state.baseUrl)
+  const baseUrl = useSelector((state) => state.baseUrl);
 
-
-  const handleFetchCatImage = async () => {
+const handleFetchCatImage = async () => {
     try {
-      const imageUrl = await fetchImage(baseUrl);
+const imageUrl = await fetchImage(baseUrl);
       dispatch(fetchRandomCatImageAction(imageUrl));
     } catch (error) {
       console.error("Failed to fetch dog image:", error);

@@ -1,11 +1,11 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  imageUrl: '',
+  imageUrl: "",
 };
 
 const dogImageSlice = createSlice({
-  name: 'dogImage',
+  name: "dogImage",
   initialState,
   reducers: {
     fetchRandomImage(state, action) {
@@ -14,6 +14,6 @@ const dogImageSlice = createSlice({
   },
 });
 
-export const {fetchRandomImage} = dogImageSlice.actions
+export const { fetchRandomImage } = dogImageSlice.actions;
 
 export default dogImageSlice.reducer;

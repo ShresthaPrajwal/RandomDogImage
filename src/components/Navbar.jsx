@@ -6,7 +6,7 @@ import { fetchRandomDogImageAction } from "../redux/actions/dogImageActions";
 const NavBar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  
+
   const handleClickDog = () => {
     dispatch(setBaseUrlAction(import.meta.env.VITE_DOG_API));
     navigate("/");

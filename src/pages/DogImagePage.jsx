@@ -8,7 +8,7 @@ import NavBar from "../components/Navbar";
 function DogImagePage() {
   const dispatch = useDispatch();
   const imageUrl = useSelector((state) => state.dogImage.imageUrl);
-  const baseUrl = useSelector((state) => state.baseUrl)
+  const baseUrl = useSelector((state) => state.baseUrl);
 
   const handleFetchDogImage = async () => {
     try {

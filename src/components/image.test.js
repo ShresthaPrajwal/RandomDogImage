@@ -1,6 +1,5 @@
-import "@testing-library/jest-dom"
+import "@testing-library/jest-dom";
 
-describe('image-component testing',()=>{
-    test('render image',()=>{
-    })
-})
+describe("image-component testing", () => {
+  test("render image", () => {});
+});
