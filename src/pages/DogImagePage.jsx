@@ -12,8 +12,8 @@ function DogImagePage() {
 
   const handleFetchDogImage = async () => {
     try {
-      const imageUrl = await fetchImage(baseUrl);
-      dispatch(fetchRandomDogImageAction(imageUrl));
+     
+      dispatch(fetchRandomDogImageAction(baseUrl));
     } catch (error) {
       console.error('Failed to fetch dog image:', error);
     }

@@ -12,8 +12,7 @@ function CatImagePage() {
 
   const handleFetchCatImage = async () => {
     try {
-      const imageUrl = await fetchImage(baseUrl);
-      dispatch(fetchRandomCatImageAction(imageUrl));
+      dispatch(fetchRandomCatImageAction(baseUrl));
     } catch (error) {
       console.error('Failed to fetch dog image:', error);
     }

@@ -1,7 +1,10 @@
 import { fetchRandomImage } from '../slices/catImageSlice';
+import fetchImage from '../../services/api';
 
-export const fetchRandomCatImageAction = (imageUrl) => {
+
+export const fetchRandomCatImageAction = (baseUrl) => {
   return async (dispatch) => {
-    dispatch(fetchRandomImage(imageUrl));
+    const newImage = await fetchImage(baseUrl)
+    dispatch(fetchRandomImage(newImage));
   };
 };
