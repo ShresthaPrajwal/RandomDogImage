@@ -1,4 +1,4 @@
-import { fetchRandomImage } from "../slices/catImageSlice";
+import { fetchRandomImage } from '../slices/catImageSlice';
 
 export const fetchRandomCatImageAction = (imageUrl) => {
   return async (dispatch) => {

@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 const fetchImage = async (baseUrl) => {
   try {
@@ -7,7 +7,7 @@ const fetchImage = async (baseUrl) => {
       return response.data.message;
     else return response.data[0].url;
   } catch (error) {
-    console.error("Failed to fetch dog image:", error);
+    console.error('Failed to fetch dog image:', error);
   }
 };
 

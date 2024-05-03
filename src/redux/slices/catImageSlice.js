@@ -1,11 +1,11 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  imageUrl: "",
+  imageUrl: '',
 };
 
 const catImageSlice = createSlice({
-  name: "catImage",
+  name: 'catImage',
   initialState,
   reducers: {
     fetchRandomImage(state, action) {

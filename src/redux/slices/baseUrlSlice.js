@@ -1,11 +1,11 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   value: import.meta.env.VITE_DOG_API,
 };
 
 const baseUrlSlice = createSlice({
-  name: "baseUrl",
+  name: 'baseUrl',
   initialState,
   reducers: {
     setBaseUrl(state, action) {

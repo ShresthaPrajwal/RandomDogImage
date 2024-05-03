@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import Image from "../components/Image";
-import { fetchRandomDogImageAction } from "../redux/actions/dogImageActions";
-import fetchImage from "../services/api";
-import NavBar from "../components/Navbar";
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import Image from '../components/Image';
+import { fetchRandomDogImageAction } from '../redux/actions/dogImageActions';
+import fetchImage from '../services/api';
+import NavBar from '../components/Navbar';
 
 function DogImagePage() {
   const dispatch = useDispatch();
@@ -15,7 +15,7 @@ function DogImagePage() {
       const imageUrl = await fetchImage(baseUrl);
       dispatch(fetchRandomDogImageAction(imageUrl));
     } catch (error) {
-      console.error("Failed to fetch dog image:", error);
+      console.error('Failed to fetch dog image:', error);
     }
   };
 
@@ -24,20 +24,20 @@ function DogImagePage() {
   }, []);
 
   return (
-    <div className="text-center">
+    <div className='text-center'>
       <NavBar />
-      <div className="flex flex-col justify-center items-center h-1/2">
-        <h1 className="text-slate-900 text-3xl m-10">
+      <div className='flex flex-col justify-center items-center h-1/2'>
+        <h1 className='text-slate-900 text-3xl m-10'>
           Generate Random Dog Images
         </h1>
         {imageUrl ? (
-          <Image src={imageUrl} alt="Random Dog Image" />
+          <Image src={imageUrl} alt='Random Dog Image' />
         ) : (
           <p>Fetching dog image...</p>
         )}
         <button
           onClick={handleFetchDogImage}
-          className="bg-slate-900 hover:bg-gray-400 text-gray-100 hover:text-gray-100 font-bold py-2 px-4 rounded-xl w-1/4"
+          className='bg-slate-900 hover:bg-gray-400 text-gray-100 hover:text-gray-100 font-bold py-2 px-4 rounded-xl w-1/4'
         >
           Get Random Dog Image
         </button>
