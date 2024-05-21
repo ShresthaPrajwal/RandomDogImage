@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Image from '../components/Image';
-import fetchImage from '../services/api';
 import NavBar from '../components/Navbar';
 import { fetchRandomCatImageAction } from '../redux/actions/catImageAction';
 
@@ -19,8 +18,11 @@ function CatImagePage() {
   };
 
   useEffect(() => {
-    handleFetchCatImage();
-  }, []);
+    if (!imageUrl) {
+      handleFetchCatImage();
+    }
+  }, [imageUrl]);
+  
 
   return (
     <div className='text-center'>

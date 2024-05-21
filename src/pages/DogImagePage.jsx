@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Image from '../components/Image';
 import { fetchRandomDogImageAction } from '../redux/actions/dogImageActions';
-import fetchImage from '../services/api';
 import NavBar from '../components/Navbar';
 
 function DogImagePage() {
@@ -12,7 +11,6 @@ function DogImagePage() {
 
   const handleFetchDogImage = async () => {
     try {
-     
       dispatch(fetchRandomDogImageAction(baseUrl));
     } catch (error) {
       console.error('Failed to fetch dog image:', error);
@@ -20,8 +18,10 @@ function DogImagePage() {
   };
 
   useEffect(() => {
-    handleFetchDogImage();
-  }, []);
+    if (!imageUrl) {
+      handleFetchDogImage();
+    }
+  }, [imageUrl]);
 
   return (
     <div className='text-center'>
